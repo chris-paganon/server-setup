@@ -1,0 +1,1 @@
+To serve static files without server-blocks, just put them here.
