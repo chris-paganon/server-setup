@@ -12,7 +12,6 @@ sudo ufw allow 'Nginx Full'
 
 FTP nginx.conf
 
-
 ### Setting up server-blocks
 
 FTP vueai.tools & umami.vueai.tools
@@ -23,6 +22,7 @@ Create symlinks to sites-enabled
 ``` bash
 ln -s /etc/nginx/sites-available/vueai.tools /etc/nginx/sites-enabled/vueai.tools
 ln -s /etc/nginx/sites-available/umami.vueai.tools /etc/nginx/sites-enabled/umami.vueai.tools
+sudo systemctl restart nginx
 ```
 
 ### Setting up SSL certifications
@@ -64,6 +64,10 @@ sudo certbot --nginx
 
 Certbot should have modified the vueai.tools file content to look like the current repo. Just replace again the location block.
 
+``` bash
+sudo systemctl restart nginx
+```
+
 ## Running a node server to serve the files
 
 ### Install nodejs
@@ -87,4 +91,5 @@ docker compose up
 ```
 
 Umami should be availabe at https://umami.vueai.tools
+
 [Follow instructions here to setup](https://umami.is/docs/getting-started)
