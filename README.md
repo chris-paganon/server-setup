@@ -76,7 +76,7 @@ sudo systemctl restart nginx
 Do not use snap package manager or pm2 won't work
 
 #### Install PM2 node process manager
-FTP ecosystem.config.js
+FTP ecosystem.config.js & replace the env values for production
 ``` bash
 sudo npm install -g pm2
 cd /opt/vueai.tools
