@@ -5,7 +5,11 @@ module.exports = {
       port: '3002',
       exec_mode: 'cluster',
       instances: 'max',
-      script: './.output/server/index.mjs'
+      script: './.output/server/index.mjs',
+      env: {
+        "NUXT_OPENAI_ORGANIZATION": "org-ab12",
+        "NUXT_OPENAI_API_KEY": "sk-cd34"
+      }
     }
   ]
 }
