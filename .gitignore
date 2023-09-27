@@ -1,2 +1,2 @@
 *.env
-ecosystem.config.js
+/opt/vueai.tools/ecosystem.config.js
